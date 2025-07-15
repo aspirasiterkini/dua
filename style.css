@@ -16,13 +16,14 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  margin: 0 15px;
+  margin: 10px;
 }
 
 .nav-links a {
@@ -39,6 +40,7 @@ section {
 
 h1, h2 {
   color: #4CAF50;
+  text-align: center;
 }
 
 form {
@@ -51,6 +53,7 @@ input, textarea {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 button {
@@ -60,6 +63,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
@@ -71,4 +75,19 @@ footer {
   padding: 20px;
   background-color: #eee;
   margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+
+  input, textarea, button {
+    font-size: 14px;
+  }
 }
